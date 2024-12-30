@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Six and Out</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <!-- Hamburger Menu -->
+    <div class="off-screen-menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Matches</a></li>
+            <li><a href="#">Players</a></li>
+            <li><a href="#">Standings</a></li>
+            <li><a href="#">Teams</a></li>
+            <li><a href="#">Rankings</a></li>
+        </ul>
+    </div>
+
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="logo-title">
+            <img src="static/images/logo.png" alt="Six and Out Logo" class="site-logo">
+            <h1>Six and Out</h1>
+        </div>
+        <nav class="top-menu">
+            <ul>
+                <nav class="top-menu">
+                    <ul>
+                        <ul>
+                            <li><a href="/matches">Matches</a></li>
+                            <li><a href="/players">Players</a></li>
+                            <li><a href="/teams">Teams</a></li>
+                            <li><a href="/standings">Standings</a></li>
+                            <li><a href="/login">Login</a></li>
+                            <li><a href="/signup">Signup</a></li>
+                            <li><a href="/news">News</a></li>
+                        </ul>
+                        
+                    </ul>
+                </nav>
+                
+        <div class="auth-buttons">
+            <a href="#login" class="btn">Login</a>
+            <a href="#signup" class="btn">Signup</a>
+        </div>
+    </header>
+
+    <nav>
+        <div class="ham-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+            
+        </div>
+    </nav>
+
+    <!-- Main Content Section -->
+    <main class="main-content">
+        <!-- Left Section: Player Comparison Tool -->
+        <section class="left-section">
+            <h2 style="color: #007ACC; font-weight: bold;">Player Comparison Tool</h2>
+            <form id="player-comparison-form">
+                <label for="batter">Select Batter:</label>
+                <select id="batter">
+                    <option value="Virat Kohli">Virat Kohli (India)</option>
+                    <option value="Joe Root">Joe Root (England)</option>
+                    <option value="Steve Smith">Steve Smith (Australia)</option>
+                    <option value="Kane Williamson">Kane Williamson (New Zealand)</option>
+                    <option value="Babar Azam">Babar Azam (Pakistan)</option>
+                    <option value="Sachin Tendulkar">Sachin Tendulkar (India)</option>
+                    <option value="Brian Lara">Brian Lara (West Indies)</option>
+                    <option value="Ricky Ponting">Ricky Ponting (Australia)</option>
+                    <option value="Jacques Kallis">Jacques Kallis (South Africa)</option>
+                    <option value="Rahul Dravid">Rahul Dravid (India)</option>
+                    <option value="Kumar Sangakkara">Kumar Sangakkara (Sri Lanka)</option>
+                    <option value="Don Bradman">Don Bradman (Australia)</option>
+                    <option value="Viv Richards">Viv Richards (West Indies)</option>
+                    <option value="Sunil Gavaskar">Sunil Gavaskar (India)</option>
+                    <option value="AB de Villiers">AB de Villiers (South Africa)</option>
+                </select>
+                <label for="bowler">Select Bowler:</label>
+                <select id="bowler">
+                    <option value="Jasprit Bumrah">Jasprit Bumrah (India)</option>
+                    <option value="Shaheen Afridi">Shaheen Afridi (Pakistan)</option>
+                    <option value="Pat Cummins">Pat Cummins (Australia)</option>
+                    <option value="Kagiso Rabada">Kagiso Rabada (South Africa)</option>
+                    <option value="Rashid Khan">Rashid Khan (Afghanistan)</option>
+                    <option value="Trent Boult">Trent Boult (New Zealand)</option>
+                    <option value="Mitchell Starc">Mitchell Starc (Australia)</option>
+                    <option value="Ravichandran Ashwin">Ravichandran Ashwin (India)</option>
+                    <option value="Josh Hazlewood">Josh Hazlewood (Australia)</option>
+                    <option value="Mohammed Shami">Mohammed Shami (India)</option>
+                    <option value="Muttiah Muralitharan">Muttiah Muralitharan (Sri Lanka)</option>
+                    <option value="Shane Warne">Shane Warne (Australia)</option>
+                    <option value="Wasim Akram">Wasim Akram (Pakistan)</option>
+                    <option value="Glenn McGrath">Glenn McGrath (Australia)</option>
+                    <option value="Anil Kumble">Anil Kumble (India)</option>
+                </select>
+                <label for="year">Select Year:</label>
+                <select id="year">
+                    <script>
+                        for (let year = 2023; year >= 2000; year--) {
+                            document.write(`<option value="${year}">${year}</option>`);
+                        }
+                    </script>
+                </select>
+                <button type="submit" class="compare-btn">Compare</button>
+            </form>
+        </section>
+
+        <!-- Right Section: ICC Standings and Matches -->
+        <section class="right-section">
+            <!-- ICC T20 World Cup Standings -->
+            <div class="standings-section">
+                <h2>ICC T20 World Cup 2024 Standings</h2>
+                <nav class="standings-nav">
+                    <ul>
+                        <li><a href="#group-a" class="active">Group A</a></li>
+                        <li><a href="#group-b">Group B</a></li>
+                        <li><a href="#group-c">Group C</a></li>
+                        <li><a href="#group-d">Group D</a></li>
+                        <li><a href="#super-eight-1">Super Eight Group 1</a></li>
+                        <li><a href="#super-eight-2">Super Eight Group 2</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Group A -->
+                <section id="group-a" class="standings-group">
+                    <h3>Group A</h3>
+                    <table class="standings-table">
+                        <thead>
+                            <tr>
+                                <th>Pos</th>
+                                <th>Team</th>
+                                <th>Pld</th>
+                                <th>NRR</th>
+                                <th>Pts</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Q1</td><td>IND</td><td>4</td><td>+1.137</td><td>7</td></tr>
+                            <tr><td>Q2</td><td>USA</td><td>4</td><td>+0.127</td><td>5</td></tr>
+                            <tr><td>3</td><td>PAK</td><td>4</td><td>+0.294</td><td>4</td></tr>
+                            <tr><td>4</td><td>CAN</td><td>4</td><td>-0.493</td><td>3</td></tr>
+                            <tr><td>5</td><td>IRE</td><td>4</td><td>-1.293</td><td>1</td></tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- Group B -->
+                <section id="group-b" class="standings-group">
+                    <h3>Group B</h3>
+                    <table class="standings-table">
+                        <thead>
+                            <tr>
+                                <th>Pos</th>
+                                <th>Team</th>
+                                <th>Pld</th>
+                                <th>NRR</th>
+                                <th>Pts</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Q1</td><td>AUS</td><td>4</td><td>+2.791</td><td>8</td></tr>
+                            <tr><td>Q2</td><td>ENG</td><td>4</td><td>+3.611</td><td>5</td></tr>
+                            <tr><td>3</td><td>SCO</td><td>4</td><td>+1.255</td><td>5</td></tr>
+                            <tr><td>4</td><td>NAM</td><td>4</td><td>-2.585</td><td>2</td></tr>
+                            <tr><td>5</td><td>OMA</td><td>4</td><td>-3.062</td><td>0</td></tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- Group C -->
+                <section id="group-c" class="standings-group">
+                    <h3>Group C</h3>
+                    <table class="standings-table">
+                        <thead>
+                            <tr>
+                                <th>Pos</th>
+                                <th>Team</th>
+                                <th>Pld</th>
+                                <th>NRR</th>
+                                <th>Pts</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Q1</td><td>WI</td><td>4</td><td>+3.257</td><td>8</td></tr>
+                            <tr><td>Q2</td><td>AFG</td><td>4</td><td>+1.835</td><td>6</td></tr>
+                            <tr><td>3</td><td>NZ</td><td>4</td><td>+0.415</td><td>4</td></tr>
+                            <tr><td>4</td><td>UGA</td><td>4</td><td>-4.510</td><td>2</td></tr>
+                            <tr><td>5</td><td>PNG</td><td>4</td><td>-1.268</td><td>0</td></tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- Group D -->
+                <section id="group-d" class="standings-group">
+                    <h3>Group D</h3>
+                    <table class="standings-table">
+                        <thead>
+                            <tr>
+                                <th>Pos</th>
+                                <th>Team</th>
+                                <th>Pld</th>
+                                <th>NRR</th>
+                                <th>Pts</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Q1</td><td>SA</td><td>4</td><td>+0.470</td><td>8</td></tr>
+                            <tr><td>Q2</td><td>BAN</td><td>4</td><td>+0.616</td><td>6</td></tr>
+                            <tr><td>3</td><td>SL</td><td>4</td><td>+0.863</td><td>3</td></tr>
+                            <tr><td>4</td><td>NED</td><td>4</td><td>-1.358</td><td>2</td></tr>
+                            <tr><td>5</td><td>NEP</td><td>4</td><td>-0.542</td><td>1</td></tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- Super Eight Group 1 -->
+                <section id="super-eight-1" class="standings-group">
+                    <h3>Super Eight Group 1</h3>
+                    <table class="standings-table">
+                        <thead>
+                            <tr>
+                                <th>Pos</th>
+                                <th>Team</th>
+                                <th>Pld</th>
+                                <th>NRR</th>
+                                <th>Pts</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Q1</td><td>IND</td><td>3</td><td>+2.017</td><td>6</td></tr>
+                            <tr><td>Q2</td><td>AFG</td><td>3</td><td>-0.305</td><td>4</td></tr>
+                            <tr><td>3</td><td>AUS</td><td>3</td><td>-0.331</td><td>2</td></tr>
+                            <tr><td>4</td><td>BAN</td><td>3</td><td>-1.709</td><td>0</td></tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- Super Eight Group 2 -->
+                <section id="super-eight-2" class="standings-group">
+                    <h3>Super Eight Group 2</h3>
+                    <table class="standings-table">
+                        <thead>
+                            <tr>
+                                <th>Pos</th>
+                                <th>Team</th>
+                                <th>Pld</th>
+                                <th>NRR</th>
+                                <th>Pts</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Q1</td><td>SA</td><td>3</td><td>+0.599</td><td>6</td></tr>
+                            <tr><td>Q2</td><td>ENG</td><td>3</td><td>+1.992</td><td>4</td></tr>
+                            <tr><td>3</td><td>WI</td><td>3</td><td>+0.963</td><td>2</td></tr>
+                            <tr><td>4</td><td>USA</td><td>3</td><td>-3.906</td><td>0</td></tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+
+            <!-- Semi-finals Section -->
+            <div class="semi-finals-section">
+                <h2>Semi-Final Matches</h2>
+                <div class="match-card">
+                    <div class="team">
+                        <span class="team-name">India</span>
+                        <span class="team-score">171/7 (20)</span>
+                    </div>
+                    <div class="team">
+                        <span class="team-name">England</span>
+                        <span class="team-score">103 (16.4)</span>
+                    </div>
+                    <div class="result">
+                        <span>IND won by 68 runs</span>
+                    </div>
+                </div>
+                <div class="match-card">
+                    <div class="team">
+                        <span class="team-name">Afghanistan</span>
+                        <span class="team-score">56 (11.5)</span>
+                    </div>
+                    <div class="team">
+                        <span class="team-name">South Africa</span>
+                        <span class="team-score">60/1 (8.5)</span>
+                    </div>
+                    <div class="result">
+                        <span>SA won by 9 wickets</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Final Match Section -->
+            <div class="final-match-section">
+                <h2>Final Match</h2>
+                <div class="match-card">
+                    <div class="team">
+                        <span class="team-name">India</span>
+                        <span class="team-score">176/7 (20)</span>
+                    </div>
+                    <div class="team">
+                        <span class="team-name">South Africa</span>
+                        <span class="team-score">169/8 (20)</span>
+                    </div>
+                    <div class="result">
+                        <span>IND won by 7 runs</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </main>
+
+        <!-- Feedback Section -->
+        <footer>
+            <div class="feedback-container">
+                <h2>Partner with Us / Feedback</h2>
+                <form id="feedback-form">
+                    <div class="form-row">
+                        <input type="text" id="first-name" placeholder="First name" required>
+                        <input type="text" id="last-name" placeholder="Last name" required>
+                    </div>
+                    <input type="email" id="email" placeholder="Business email address" required>
+                    <input type="text" id="company" placeholder="Company name" required>
+                    <label for="country">Select country:</label>
+                    <select id="country" required>
+                        <option value="">--Select--</option>
+                        <option value="India">India</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="United States">United States</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Others">Others</option>
+                    </select>
+                    <label for="services">Select required services:</label>
+                    <select id="services" required>
+                        <option value="">--Select--</option>
+                        <option value="Sponsorship">Sponsorship</option>
+                        <option value="Advertising">Advertising</option>
+                        <option value="Technical Support">Technical Support</option>
+                        <option value="Others">Others</option>
+                    </select>
+                    <textarea id="message" rows="5" placeholder="How can we help?" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </footer>
+    
+        <script src="static/js/app.js"></script>
+
+    </body>
+    </html>

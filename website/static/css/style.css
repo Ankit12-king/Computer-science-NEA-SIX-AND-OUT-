@@ -1,0 +1,251 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+h1, h2, h3 {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: #007ACC;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007ACC;
+    color: white;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #005f99;
+}
+
+/* Header Section */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #282c34;
+    color: white;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+}
+
+.site-logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo-title h1 {
+    margin: 0;
+    font-size: 24px;
+    color: white;
+}
+
+.top-menu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.top-menu ul li {
+    margin: 0 15px;
+}
+
+.auth-buttons a {
+    background-color: #f4f4f9;
+    color: #007ACC;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.auth-buttons a:hover {
+    background-color: #007ACC;
+    color: white;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.left-section {
+    flex: 1;
+    max-width: 35%;
+    margin-right: 20px;
+}
+
+.right-section {
+    flex: 2;
+    max-width: 65%;
+}
+
+/* Player Comparison Tool */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form select, form button {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Standings */
+.standings-section h2 {
+    color: #007ACC;
+    font-size: 20px;
+}
+
+.standings-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.standings-nav ul li {
+    margin-right: 20px;
+}
+
+.standings-nav a.active {
+    color: #ff007f;
+    text-decoration: underline;
+}
+
+.standings-group {
+    margin-top: 20px;
+}
+
+.standings-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.standings-table th, .standings-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.standings-table th {
+    background-color: #007ACC;
+    color: white;
+}
+
+/* Semi-finals Section */
+.semi-finals-section {
+    margin-top: 40px;
+}
+
+.match-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e3f2fd;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.match-card .team {
+    text-align: center;
+}
+
+.match-card .team-score {
+    font-size: 16px;
+    font-weight: bold;
+    color: #007ACC;
+}
+
+.result {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Feedback Container */
+.feedback-container {
+    width: 500px;
+    background-color: #4b0082;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 20px auto;
+}
+
+.feedback-container h2 {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+form input:focus, form select:focus, form textarea:focus {
+    outline: none;
+    border: 1px solid #007ACC;
+    box-shadow: 0 0 5px #007ACC;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #007ACC;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    font-size: 16px;
+}
+
+form button:hover {
+    background-color: #005f99;
+}
