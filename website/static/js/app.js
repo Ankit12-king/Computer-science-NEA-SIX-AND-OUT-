@@ -18,25 +18,19 @@ document.addEventListener('DOMContentLoaded', () => {
         tab.addEventListener('click', (e) => {
             e.preventDefault();
 
-            // Remove active class from all tabs
             tabs.forEach(t => t.classList.remove('active'));
 
-            // Add active class to clicked tab
             tab.classList.add('active');
 
-            // Hide all groups
             groups.forEach(group => (group.style.display = 'none'));
 
-            // Show the selected group
             const targetGroup = document.querySelector(tab.getAttribute('href'));
             if (targetGroup) targetGroup.style.display = 'block';
         });
     });
 
-    // Default: Show the first group (Group A)
     document.querySelector('#group-a').style.display = 'block';
 
-    // Semi-finals Match Cards Interactivity
     const semiFinalsSection = document.querySelector('.semi-finals-section');
     if (semiFinalsSection) {
         const matchCards = semiFinalsSection.querySelectorAll('.match-card');
@@ -48,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Feedback Form
+  
     const feedbackForm = document.getElementById("feedback-form");
 
     feedbackForm.addEventListener("submit", (e) => {
@@ -67,7 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
             We'll get back to you at ${email}.
         `);
 
-        // Optionally reset the form
         feedbackForm.reset();
     });
 });
